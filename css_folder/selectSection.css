@@ -1,0 +1,130 @@
+:root {
+  --Marine-blue: hsl(213, 96%, 18%);
+  --Purplish-blue: hsl(243, 100%, 62%);
+  --Pastel-blue: hsl(228, 100%, 84%);
+  --Light-blue: hsl(206, 94%, 87%); /* back ground body*/
+  --Strawberry-red: hsl(354, 84%, 57%);
+  /* ------------------------------------------ */
+  --Cool-gray: hsl(231, 11%, 63%);
+  --Light-gray: hsl(229, 24%, 87%);
+  --Magnolia: hsl(217, 100%, 97%);
+  --Alabaster: hsl(231, 100%, 99%);
+  --White: hsl(0, 0%, 100%); /* back ground container*/
+}
+
+.the-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.the-form .process {
+  width: calc((100% / 3));
+  height: 170px;
+  border: 1px solid var(--Cool-gray);
+  border-radius: 6px;
+  padding: 1rem;
+  outline: none;
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  align-items: flex-end;
+}
+
+.the-form .process .text-pro {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  margin-bottom: 5px;
+}
+.text-pro b {
+  color: var(--Marine-blue);
+  font-weight: 500;
+  font-size: 17px;
+  margin-bottom: 4px;
+}
+.text-pro small {
+  color: var(--Cool-gray);
+  font-weight: 500;
+  font-size: 15px;
+  margin-bottom: 2px;
+  opacity: 0.6;
+}
+.cheack {
+  background-color: var(--Magnolia);
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  border-radius: 10px;
+}
+.cheack form label {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.cheack form label .checkbox {
+  position: relative;
+}
+.switch {
+  width: 40px;
+  background-color: var(--Marine-blue);
+  height: 25px;
+  border-radius: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.cheack input {
+  display: none;
+}
+.switch span {
+  width: 30%;
+  height: 55%;
+  background-color: var(--White);
+  display: block;
+  border-radius: 50%;
+  transition: 0.4s ease;
+  margin: 0 5px;
+}
+.cheack input:checked + span {
+  transform: translate(calc(19px));
+}
+.Monthly {
+  margin-right: 20px;
+}
+.Yearly {
+  margin-left: 20px;
+  color: var(--Cool-gray);
+}
+
+.proActive {
+  background-color: var(--Magnolia);
+  border: 1px solid var(--Purplish-blue) !important;
+}
+@media (max-width: 800px) {
+  .the-form {
+    display: flex;
+    flex-direction: column;
+  }
+  .the-form .process {
+    height: 70px;
+    display: flex;
+    width: 100%;
+    border-radius: 10px;
+    padding: 0;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+  }
+  .process img {
+    margin-left: 15px;
+  }
+}
+.state2 {
+  display: none;
+}
